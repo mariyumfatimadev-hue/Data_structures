@@ -1,0 +1,27 @@
+#include<iostream>
+using namespace std;
+int main(){
+    //actually the psarse is 7x5
+    // we have a sparse array so that we took 3 another array to put only sparse elements
+    // arrof rows for on which row element is present'
+   int arrofrow[] = {0,0,1,4,4,4,6};
+    //arrofcol for on which col element is present
+    int arrofcol[] = {0,2,2,2,3,3,4};
+    //arrofdata for data of sparse array
+    int arrofdata[] = {1,2,5,7,1,2,9};
+    //accessing of data
+    int targetrow;
+    int targetcol;
+    cout<<"enter the row and column for which you need data";
+    cin>>targetrow>>targetcol;
+   //isma ab access kare ge
+    for(int i =0; i< /*sizeof(arrofdata)*/7; i++ ){//sizeof(arrofdata) se behtar ha ke total elements kar lo jase ke i<nooftotalelements
+        if(arrofrow[i] == targetrow && arrofcol[i] == targetcol){
+            cout<<arrofdata[i];
+            break;
+        }
+    }
+
+return 0;
+
+}
