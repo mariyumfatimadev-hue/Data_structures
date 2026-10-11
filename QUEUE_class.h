@@ -67,7 +67,9 @@ Queue(int initialCap = 10)
         }
         return *this;
     }
-
+if (isEmpty()) {
+    throw std::underflow_error("Queue is empty");
+}
 T dequeue()
     {
         T value = data[frontIndex];
